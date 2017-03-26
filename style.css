@@ -17,7 +17,6 @@ body {
         letter-spacing: 1px;
     }        
 
-
     .statusBox { width: 100%; }
 
         .townRun { height: 78px; }
@@ -25,7 +24,7 @@ body {
         .rangeline { height: 549px; }
         .southwestway { height: 936px }
 
-        @media only screen and (min-width: 767px) {
+        @media only screen and (min-width: 783px) {
             .townRun { height: 48px; }
             .ftHarrison { height: 144px; }
             .rangeline { height: 336px; }
