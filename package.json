@@ -1,7 +1,7 @@
 {
   "name": "indiana-mtb-trail-conditions",
   "version": "1.0.0",
-  "homepage": "http://rmarganti.github.io/indiana-mtb-trail-conditions",
+  "homepage": "http://rmarganti.github.io/indy-trail-conditions",
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
