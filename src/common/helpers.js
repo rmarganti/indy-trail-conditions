@@ -31,3 +31,6 @@ export const saveVisibleTrailSystems = (keys = []) => {
  */
 export const getTrailSystemsByKeys = (keys = []) =>
     keys.map(key => trailSystems.find(trailSystem => trailSystem.key === key));
+
+export const getTrailSystemsExcluding = (keys = []) =>
+    trailSystems.filter(trailSystem => !keys.includes(trailSystem.key));

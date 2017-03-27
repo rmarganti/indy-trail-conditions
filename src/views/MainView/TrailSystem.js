@@ -9,7 +9,7 @@ const Container = styled.div`
 
 const Header = styled.h2`
     margin: 0.5em;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: normal;
     letter-spacing: 1px;
 `;

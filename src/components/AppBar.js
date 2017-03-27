@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import settingsIcon from '../media/settings-icon.svg';
+import settingsIcon from '../media/icon-settings.svg';
 
 const Container = styled.div`
     display: flex;
@@ -38,7 +38,7 @@ const AppBar = ({ onToggleConfig }) => (
 );
 
 AppBar.propTypes = {
-    onToggleConfig: React.PropTypes.function,
+    onToggleConfig: React.PropTypes.func,
 };
 
 export default AppBar;
