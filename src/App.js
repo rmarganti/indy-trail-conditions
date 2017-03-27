@@ -15,7 +15,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            configuring: true,
+            configuring: false,
         };
 
         this.onToggleConfig = this.onToggleConfig.bind(this);
