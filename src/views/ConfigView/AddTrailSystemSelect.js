@@ -9,8 +9,13 @@ const Heading = styled.h3`
 `;
 
 const SelectBox = styled.select`
+    width: 100%;
     padding: 0.5em;
     font-size: 1em;
+
+    @media screen and (min-width: 40em) {
+        width: 25em;
+    }
 `;
 
 const AddTrailSystemSelect = ({ onAdd, visibleTrailSystems }) => {
@@ -20,7 +25,7 @@ const AddTrailSystemSelect = ({ onAdd, visibleTrailSystems }) => {
 
     return (
         <label> 
-            <Heading>Select a Trail System to Add</Heading>       
+            <Heading>Select a Trail System to Add:</Heading>       
             <SelectBox value="" onChange={e => onAdd(e.target.value)}>
                 <option value="" disabled />
                 {
