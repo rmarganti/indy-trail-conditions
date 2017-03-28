@@ -1,5 +1,5 @@
 import React from 'react';
-import {SortableElement} from 'react-sortable-hoc';
+import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import styled from 'styled-components';
 
 import draggableIcon from '../../media/icon-draggable.svg';
@@ -11,13 +11,13 @@ const Container = styled.div`
     padding: 1em;
     background-color: #b0bacd;
     color: #252b39;
-    cursor: move;
 `;
 
-const Draggable = styled.img`
+const Draggable = SortableHandle(styled.img`
     flex-grow: 0;
     margin-right: 0.75em;
-`;
+    cursor: move;
+`);
 
 const Name = styled.h2`
     flex: 1;

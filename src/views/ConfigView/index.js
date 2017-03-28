@@ -56,7 +56,7 @@ class ConfigView extends React.Component {
                     trailSystems={getTrailSystemsByKeys(this.state.visibleTrailSystems)}
                     onRemove={this.onRemove}
                     onSortEnd={this.onSortEnd}
-                    pressDelay={200}
+                    useDragHandle={true}
                 />
                 
                 <AddTrailSystemSelect
