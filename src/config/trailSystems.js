@@ -1,15 +1,27 @@
 export default [
     {
-        key: 'townRun',
-        name: 'Town Run',
-        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9582821&y=4853948&z=10&height=2000',
-        trailCount: 1,
+        key: 'brownCounty',
+        name: 'Brown County State Park',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9598169&y=4746949&z=9&height=2000',
+        trailCount: 7,
+    },
+    {
+        key: 'ferdinanaForest',
+        name: 'Ferdinand Forest',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9660050&y=4617550&z=9&height=2000',
+        trailCount: 2,
     },
     {
         key: 'ftHarrison',
         name: 'Ft Harrison',
         url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9575549&y=4846527&z=9&height=2000',
         trailCount: 4,
+    },
+    {
+        key: 'obannon',
+        name: 'O\'Bannon Woods State Park',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9604309&y=4606015&z=8&height=2000',
+        trailCount: 7,
     },
     {
         key: 'rangeline',
@@ -22,5 +34,23 @@ export default [
         name: 'Southwestway',
         url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9601495&y=4815442&z=8&height=2000',
         trailCount: 12,
+    },
+    {
+        key: 'townRun',
+        name: 'Town Run',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9582821&y=4853948&z=10&height=2000',
+        trailCount: 1,
+    },
+    {
+        key: 'versailles',
+        name: 'Versailles',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9488144&y=4734869&z=10&height=2000',
+        trailCount: 7,
+    },
+    {
+        key: 'yellowwood',
+        name: 'Yellowwood State Park',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9606851&y=4739751&z=9&height=2000',
+        trailCount: 3,
     },
 ];
