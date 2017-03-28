@@ -11,10 +11,12 @@ import AddTrailSystemSelect from './AddTrailSystemSelect';
 import TrailSystemsList from './TrailSystemsList';
 
 const Container = styled.div`
+    flex: 1;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.5rem;
+    overflow-y: auto;
 `;
 
 class ConfigView extends React.Component {
