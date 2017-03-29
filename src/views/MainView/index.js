@@ -1,15 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import { getTrailSystemsByKeys, getVisibleTrailSystems } from '../../common/helpers';
+import Centered from '../../components/Centered';
+import Content from '../../components/Content';
 import TrailSystems from './TrailSystems';
 import MtbProjectFooter from './MtbProjectFooter';
-
-const Container = styled.div`
-    flex: 1;
-    width: 100%;
-    overflow-y: auto;
-`;
 
 class MainView extends React.Component {
     constructor(props) {
@@ -22,10 +17,12 @@ class MainView extends React.Component {
 
     render() {
         return (
-            <Container>
-                <TrailSystems trailSystems={getTrailSystemsByKeys(this.state.visibleTrailSystems)} />
-                <MtbProjectFooter />
-            </Container>
+            <Content>
+                <Centered padding="0.25rem">
+                    <TrailSystems trailSystems={getTrailSystemsByKeys(this.state.visibleTrailSystems)} />
+                    <MtbProjectFooter />
+                </Centered>
+            </Content>
         )
     }
 }

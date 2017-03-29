@@ -1,23 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
 import { arrayMove } from 'react-sortable-hoc';
 
-import { 
+import {
     getVisibleTrailSystems,
     getTrailSystemsByKeys,
     saveVisibleTrailSystems
 } from '../../common/helpers';
+import Centered from '../../components/Centered';
+import Content from '../../components/Content';
 import AddTrailSystemSelect from './AddTrailSystemSelect';
 import TrailSystemsList from './TrailSystemsList';
-
-const Container = styled.div`
-    flex: 1;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    overflow-y: auto;
-`;
 
 class ConfigView extends React.Component {
     constructor(props) {
@@ -46,24 +38,26 @@ class ConfigView extends React.Component {
 
     onUpdate(newOrder = []) {
         this.setState({ visibleTrailSystems: newOrder });
-        saveVisibleTrailSystems(newOrder);      
+        saveVisibleTrailSystems(newOrder);
     }
 
     render() {
         return (
-            <Container>
-                <TrailSystemsList
-                    trailSystems={getTrailSystemsByKeys(this.state.visibleTrailSystems)}
-                    onRemove={this.onRemove}
-                    onSortEnd={this.onSortEnd}
-                    useDragHandle={true}
-                />
-                
-                <AddTrailSystemSelect
-                    onAdd={this.onAdd}
-                    visibleTrailSystems={this.state.visibleTrailSystems}
-                />
-            </Container>
+            <Content>
+                <Centered padding="0.75rem">
+                    <TrailSystemsList
+                        trailSystems={getTrailSystemsByKeys(this.state.visibleTrailSystems)}
+                        onRemove={this.onRemove}
+                        onSortEnd={this.onSortEnd}
+                        useDragHandle={true}
+                    />
+
+                    <AddTrailSystemSelect
+                        onAdd={this.onAdd}
+                        visibleTrailSystems={this.state.visibleTrailSystems}
+                    />
+                </Centered>
+            </Content>
         );
     }
 }
