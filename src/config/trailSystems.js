@@ -18,6 +18,12 @@ export default [
         trailCount: 4,
     },
     {
+        key: 'griffin',
+        name: 'Griffin Bike Park',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9724685&y=4770264&z=10&height=2000',
+        trailCount: 12,
+    },
+    {
         key: 'obannon',
         name: 'O\'Bannon Woods State Park',
         url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9604309&y=4606015&z=8&height=2000',
@@ -46,6 +52,12 @@ export default [
         name: 'Versailles',
         url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9488144&y=4734869&z=10&height=2000',
         trailCount: 7,
+    },
+    {
+        key: 'westwood',
+        name: 'Westwood Park',
+        url: 'https://www.mtbproject.com/widget/conditions?v=3&x=-9509240&y=4851951&z=9&height=2000',
+        trailCount: 1,
     },
     {
         key: 'yellowwood',
