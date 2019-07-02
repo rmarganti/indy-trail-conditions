@@ -2,10 +2,30 @@ import React from 'react';
 import { SortableElement, SortableHandle } from 'react-sortable-hoc';
 import styled from 'styled-components';
 
+import { TrailSystemConfig } from '../../config/trailSystems';
 import draggableIcon from '../../media/icon-draggable.svg';
 import removeIcon from '../../media/icon-remove.svg';
 
-const Container = styled.div`
+interface TrailSystemItemProps {
+    details: TrailSystemConfig;
+    onRemove: () => void;
+}
+const TrailSystemItem: React.FunctionComponent<TrailSystemItemProps> = ({
+    details,
+    onRemove
+}) => (
+    <Root>
+        <Draggable alt="(draggable)" src={draggableIcon} />
+        <Name>{details.name}</Name>
+        <RemoveButton
+            alt={`Remove ${details.name}`}
+            src={removeIcon}
+            onClick={onRemove}
+        />
+    </Root>
+);
+
+const Root = styled.div`
     display: flex;
     margin-bottom: 2px;
     padding: 1em;
@@ -30,22 +50,5 @@ const RemoveButton = styled.img`
     margin-left: 0.75em;
     cursor: pointer;
 `;
-
-const TrailSystemItem = ({ details, onRemove }) => (
-    <Container>
-        <Draggable alt="(draggable)" src={draggableIcon} />
-        <Name>{ details.name }</Name>
-        <RemoveButton
-            alt={`Remove ${details.name}`}
-            src={removeIcon}
-            onClick={onRemove}
-        />
-    </Container>
-);
-
-TrailSystemItem.propTypes = {
-    details: React.PropTypes.object,
-    onRemove: React.PropTypes.func,
-}
 
 export default SortableElement(TrailSystemItem);

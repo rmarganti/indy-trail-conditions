@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
-const Centered = styled.div`
+interface CenteredProps {
+    padding?: string;
+}
+const Centered = styled.div<CenteredProps>`
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
