@@ -3,7 +3,23 @@ import styled from 'styled-components';
 
 import settingsIcon from '../media/icon-settings.svg';
 
-const Container = styled.div`
+interface AppBarProps {
+    onToggleConfig: () => any;
+}
+const AppBar: React.FunctionComponent<AppBarProps> = ({ onToggleConfig }) => (
+    <Root>
+        <Title>Indiana Trail Status</Title>
+        <SettingsIcon
+            src={settingsIcon}
+            alt="Settings"
+            height="20"
+            width="20"
+            onClick={onToggleConfig}
+        />
+    </Root>
+);
+
+const Root = styled.div`
     display: flex;
     padding: 0.55em;
     background-color: #546e7a;
@@ -23,22 +39,5 @@ const SettingsIcon = styled.img`
     flex: 0;
     cursor: pointer;
 `;
-
-const AppBar = ({ onToggleConfig }) => (
-    <Container>
-        <Title>Indiana Trail Status</Title>
-        <SettingsIcon 
-            src={settingsIcon}
-            alt="Settings"
-            height="20"
-            width="20"
-            onClick={onToggleConfig}
-        />
-    </Container>
-);
-
-AppBar.propTypes = {
-    onToggleConfig: React.PropTypes.func,
-};
 
 export default AppBar;
