@@ -5,6 +5,8 @@ import AppBar from './components/AppBar';
 import ConfigView from './views/ConfigView';
 import MainView from './views/MainView';
 
+import './App.css';
+
 const App: React.FunctionComponent = () => {
     const [configuring, setConfiguring] = useState(false);
     const toggleConfiguring = useCallback(() => {

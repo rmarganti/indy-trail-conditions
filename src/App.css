@@ -1,0 +1,24 @@
+html {
+    box-sizing:border-box;
+    height:100%;
+    width:100%;
+}
+
+*,:after,:before {
+    box-sizing:inherit;
+}
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+    background-color:#252b39;
+    color:#b0bacd;
+    font-family:'Roboto Slab',serif;
+}
+
+#root {
+    height:100%;
+    width:100%;
+}
